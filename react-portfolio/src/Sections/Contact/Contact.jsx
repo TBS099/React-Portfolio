@@ -81,7 +81,7 @@ class Contact extends React.Component {
           "service_portfolio",
           "template_portfolio",
           formData,
-          "Y0WCd3B_iOoP6f27j"
+          "your_private_key"
         )
         .then((response) => {
           console.log("Email sent successfully:", response);
