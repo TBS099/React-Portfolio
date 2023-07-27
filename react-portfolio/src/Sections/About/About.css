@@ -1,0 +1,50 @@
+.about-me {
+    padding:40px 5% 20px 5%;
+}
+
+.about-me .title {
+    width:50%;
+    margin-bottom:35px;
+    opacity: 0;
+}
+
+.about-me .title h1 {
+    font-size:50px;
+    margin-bottom:1.5rem;
+    padding-left:10px;
+}
+
+.timeline-skills-container {
+    display:flex;
+}
+
+.title.fade-in {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+.about-description-section {
+  opacity: 0;
+}
+
+.about-description-section.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width:765px) {
+    .timeline-skills-container {
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+}

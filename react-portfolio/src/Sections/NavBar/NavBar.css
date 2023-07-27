@@ -1,0 +1,177 @@
+.portfolio-header {
+  display: flex;
+  padding: 9px 0 0 0;
+  background-color: var(--bg-color);
+  position: fixed;
+  min-width: 100%;
+  top: 0;
+  z-index: 1001;
+  border-bottom: 1px solid;
+  font-family: Marcellus;
+}
+
+.portfolio-logo {
+  width: 50px;
+}
+
+.portfolio-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  width: 74%;
+}
+
+.portfolio-brand {
+  font-size: 20px;
+  padding-left: 10px;
+  text-decoration: none;
+  padding-bottom: 5px;
+  padding-left: 20px;
+}
+
+.portfolio-dark-light {
+  margin-top: 5px;
+}
+
+.portfolio-menu-section {
+  display: flex;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle,
+.nav_ac {
+  padding: 5px 15px;
+  border: unset;
+  background: var(--primary-color);
+  font-size: 1.25rem;
+  font-family: Marcellus;
+  color: var(--text-color-2);
+  line-height: 2;
+  height: 50px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.nav_ac:hover,
+.menu-toggle:hover {
+  color: var(--text-color-2);
+}
+
+.portfolio-menu-list .portfolio-menu-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-menu-list .portfolio-menu-links .menu-item {
+  padding-right: 40px;
+}
+
+.portfolio-menu-list .portfolio-menu-links .menu-item .menu-link {
+  text-decoration: none;
+}
+
+@media (max-width: 1420px) {
+  .portfolio-menu {
+    width: 72%;
+  }
+}
+
+@media (max-width: 1245px) {
+  .portfolio-menu {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1245px) {
+  .portfolio-menu {
+    width: 68%;
+  }
+}
+
+@media (max-width: 1180px) {
+  .portfolio-menu {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1110px) {
+  .portfolio-menu {
+    width: 60%;
+  }
+}
+
+@media (max-width: 991px) {
+  .portfolio-header {
+    display: block;
+  }
+
+  .portfolio-dark-light {
+    margin-top: 5px;
+  }
+
+  .menu-toggle {
+    color: var(--text-color);
+    display: block;
+  }
+
+  .menu-toggle:focus,
+  .menu-toggle:hover {
+    color: var(--text-color);
+    box-shadow: unset;
+  }
+
+  .menu-toggle svg {
+    width: 2em;
+    height: 2em;
+    fill: var(--text-color-2);
+    color: var(--text-color-2);
+  }
+
+  .portfolio-menu {
+    width: 100%;
+  }
+
+  .portfolio-menu-list {
+    width: 100%;
+    height: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: height 1s ease;
+  }
+
+  .portfolio-menu-list .portfolio-menu-links {
+    display: block;
+  }
+
+  .portfolio-menu-list .portfolio-menu-links .menu-item {
+    margin-top: 50px;
+    padding-right: 0;
+  }
+
+  .portfolio-menu-list .portfolio-menu-links .menu-item .menu-link {
+    font-size: 50px;
+  }
+
+  .expand {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 550px) {
+  .portfolio-menu-list .portfolio-menu-links .menu-item .menu-link {
+    font-size: 25px;
+  }
+}
+
+@media (max-width:370px) {
+  .portfolio-logo {
+    width:40px;
+  }
+}

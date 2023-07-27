@@ -1,0 +1,230 @@
+.work-timeline-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.work-timeline-header {
+  width: 50%;
+  margin-bottom: 30px;
+  opacity:0;
+}
+
+.work-timeline-header.show {
+  opacity: 1;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.work-timeline-container h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.work-timeline {
+  min-height: 50vh;
+  width: 100%;
+  margin: 0;
+  font-family: "Droid Sans", sans-serif;
+  position: relative;
+  opacity: 0;
+}
+
+.work-timeline.fade-in-top {
+  opacity: 1;
+  animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.work-timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  background-color: var(--text-color);
+}
+
+.work-timeline .entries {
+  width: calc(100% - 80px);
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  left: -5px;
+}
+
+.work-timeline .entries .entry {
+  width: calc(50% - 80px);
+  float: left;
+  padding: 20px;
+  clear: both;
+  text-align: right;
+}
+
+.work-timeline .entries .entry:not(:first-child) {
+  margin-top: -60px;
+}
+
+.work-timeline .entries .entry .experience-title {
+  font-size: 32px;
+  margin-bottom: 12px;
+  position: relative;
+  color: var(--text-color);
+}
+
+.work-timeline .entries .entry .experience-title:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 4px solid var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -73px;
+  z-index: 1000;
+}
+
+.work-timeline .entries .entry .experience-title.left {
+  margin-left: 50%;
+}
+
+.work-timeline .entries .entry .body {
+  color: var(--text-color);
+}
+
+.work-timeline .entries .entry:nth-child(2n) {
+  text-align: left;
+  float: right;
+}
+
+.work-timeline .entries .entry:nth-child(2n) .experience-title:before {
+  left: -63px;
+}
+
+@media (max-width: 991px) {
+  .work-timeline .entries .entry.body-left .body {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 905px) {
+  .work-timeline .entries .entry.body-left .body {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 870px) {
+  .work-timeline .entries .entry.body-left .body {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .work-timeline .entries .entry.body-left .body {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 765px) {
+  .work-timeline .entries .entry.body-left .body {
+    margin-left: 0;
+  }
+
+  .work-timeline-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .work-timeline .entries .entry.body-left .body {
+    margin-left: 44px;
+  }
+}
+
+@media (max-width: 460px) {
+  .work-timeline .entries .entry.body-left .body {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .work-timeline .entries .entry.body-left .body {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .work-timeline:before {
+    left: 0;
+  }
+
+  .work-timeline .entries {
+    width: 100%;
+  }
+
+  .work-timeline .entries .entry {
+    width: 100%;
+  }
+
+  .work-timeline .entries .entry.body-left .body {
+    margin-left: 0;
+  }
+
+  .work-timeline .entries .entry.body-left {
+    float: right;
+    text-align: right;
+  }
+
+  .work-timeline .entries .entry:nth-child(2n) {
+    text-align: right;
+  }
+
+  .work-timeline .entries .entry:nth-child(2n) .experience-title:before {
+    right: 0;
+    left: 17px;
+  }
+
+  .work-timeline .entries .entry.body-left .experience-title:before {
+    right: 0;
+    left: 17px;
+  }
+
+  .work-timeline .entries .entry.body-left .experience-title.left {
+    margin-left: 0;
+  }
+
+  .work-timeline .entries .entry .body {
+    width: 65%;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 315px) {
+  .work-timeline .entries .entry .body {
+    width: 80%;
+    margin-left: 20px;
+  }
+}
