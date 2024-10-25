@@ -1,1 +1,1 @@
-This is a personal portfolio displaying all of my projects, including non-professional and professional projects. This portfolio was created, using Ubaida Mutlaq’s (GitHub: ubaimutl) React Portfolio repository as a base for the website.
+This is a personal portfolio displaying all of my projects, including non-professional and professional projects. This portfolio was created, using Ubaida Mutlaq’s (GitHub: ubaimutl [https://github.com/ubaimutl/react-portfolio]) React Portfolio repository as a base for the website.
