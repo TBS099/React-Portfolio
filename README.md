@@ -23,3 +23,6 @@ This portfolio serves as an interactive display of my skills and experiences, cr
 1. Clone the repository:
    ```bash
    git clone https://github.com/TBS099/portfolio-website.git
+2. Install Dependencies
+   ```bash
+   npm install
